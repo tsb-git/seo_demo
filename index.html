@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.svg" class="img-fluid" alt="">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown has-megamenu">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Local SEO</a></li>
+                                    <li><a class="dropdown-item" href="#">Technical SEO</a></li>
+                                    <li><a class="dropdown-item" href="#">Analytices</a></li>
+                                </ul>
+                                
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Photo Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="media-coverage.html">Media Coverage</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Header -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="banner-content">
+                        <h2 class="banner-title">Meet the SEO agency that brings you traffic and leads instead of excuses.</h2>
+                        <p>Built in NYC. Delivering for clients around the world.</p>
+
+                        <a href="#contact_modal" data-bs-toggle="modal" class="btn btn-solid btn-md px-lg-5">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Banner Section -->
+    <section class="proposal-section py-4 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="proposal-container text-center">
+                        <h2 class="section-title">Let’s get started. Request for <strong>free Proposal today</strong> </h2>
+                        <div class="proposal-form">
+                            <form action="#">
+                                <div class="input-group mb-3 website-area">
+                                    <input type="text" class="form-control" placeholder="Enter Your Wesite">
+                                    <button class="input-group-text" id="send_proposal">Send me a proposal</button>
+                                </div>
+                                <div class="hidden-form" style="display: none;">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Full Name" required="" maxlength="75">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email" required="" maxlength="100">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" name="phone" placeholder="Phone No" required="" pattern=".{9,14}" maxlength="15">
+                                    </div>
+                                    <button type="submit" class="btn btn-solid">Submit Query</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--/proposal Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/proposal Section -->
+    <section class="progress-section sec-py">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-header text-center">
+                        <h2 class="section-title mb-3 mb-lg-4">60,000+ Searches Happen Each Second</h2>
+                        <p>In 2023, SEO is not about ranking for popular terms; it’s about being found when it matters most. Our skilled search engine optimization experts carefully research the right keywords for your business, ensuring you are gaining qualified traffic that converts to your bottom line.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="circular-progress-group">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div id="progress-seo-one" class="progress-circle">
+                                <div class="progress-number-group">
+                                    <span class="progress-number"></span>
+                                    <span class="progress-number-suffix">&#37;</span>
+                                </div>
+                            </div><!--/progress-circle -->
+                            <h3 class="progress-title">of online experiences begin with a search engine</h3>
+                        </div><!--/card -->
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div id="progress-seo-two" class="progress-circle">
+                                <div class="progress-number-group">
+                                    <span class="progress-number"></span>
+                                    <span class="progress-number-suffix">&#37;</span>
+                                </div>
+                            </div><!--/progress-circle -->
+                            <h3 class="progress-title">of people never scroll past the first page of results</h3>
+                        </div><!--end .card-->
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div id="progress-seo-three" class="progress-circle">
+                                <div class="progress-number-group">
+                                    <span class="progress-number"></span>
+                                    <span class="progress-number-suffix">&#37;</span>
+                                </div>
+                            </div><!--/progress-circle -->
+                            <h3 class="progress-title">of users research a product before making a purchase</h3>
+                        </div><!--end .card-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>		
+    <!--/Progress Section -->
+    
+    <section class="quote-section py-4 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="img-box">
+                        <img src="images/John_Fortuna.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <figure class="quote-content">
+                        <blockquote class="blockquote">
+                            <p>Not only did Mark make it very easy for me, he extended me special care in taking me through the complete process and explained it to me in terms I completely understood. Mark knew I was very nervous about the new design of the site and as a result, not only did he make me feel very comfortable with everything, he made it very easy to understand how to make changes quickly and easily to the site. That really showed he cared about the customer and the job he is doing and that goes a long way with me</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <h3 class="title">Jonathan Fortuna</h3>
+                            <div class="blockquote-meta"><span>Owner</span>,<span>Fly Fire Guide Service</span></div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Quote Section -->
+    <section class="seo-section sec-py">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-header">
+                        <h2 class="section-title text-center">Which SEO Solution is right for you?</h2>
+                        <p>Whether you’re a brand-new startup looking to establish a name, remedy dated optimization techniques, or boost your established website’s performance, our team provides the tools, experience and knowledge you need in your corner to grow your business.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box"><a href="#"><img src="images/seo/map-and-marker.svg" class="img-fluid object-fit-cover" alt=""></a></div>
+                        <div class="card-body">
+                            <h3 class="title"><a href="#">Local SEO</a></h3>
+                            <p>If you hope to dominate, you need a complete local SEO strategy that drives and delivers results.</p>
+                            <ul>
+                                <li>Local search optimization</li>
+                                <li>Google Business Profile</li>
+                                <li>Citation setup and optimization</li>
+                                <li>Localized content creation</li>
+                            </ul>
+                            <a href="#" class="btn btn-solid">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/card -->
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box"><a href="#"><img src="images/seo/robot-toy.svg" class="img-fluid  object-fit-cover" alt=""></a></div>
+                        <div class="card-body">
+                            <h3 class="title"><a href="#">Ecommerce SEO</a></h3>
+                            <p>Get clicks, drive conversions, and increase sales on your website with optimized eCommerce.</p>
+                            <ul>
+                                <li>Product optimization</li>
+                                <li>Site architecture</li>
+                                <li>Enhanced eCommerce analytics</li>
+                                <li>Brand awareness</li>
+                            </ul>
+                            <a href="#" class="btn btn-solid">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/card -->
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box"><a href="#"><img src="images/seo/gears.svg" class="img-fluid  object-fit-cover" alt=""></a></div>
+                        <div class="card-body">
+                            <h3 class="title"><a href="#">Technical SEO</a></h3>
+                            <p>Technical SEO provides businesses with the foundation required to scale marketing success.</p>
+                            <ul>
+                                <li>Backlink analysis</li>
+                                <li>Website migrations</li>
+                                <li>Schema markup</li>
+                                <li>Image optimization</li>
+                            </ul>
+                            <a href="#" class="btn btn-solid">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/card -->
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box"><a href="#"><img src="images/seo/table-and-graph.svg" class="img-fluid  object-fit-cover" alt=""></a></div>
+                        <div class="card-body">
+                            <h3 class="title"><a href="#">SEO Analytics</a></h3>
+                            <p>All of our SEO services feature a basic analytics package. If you're ready for a bit more, explore!</p>
+                            <ul>
+                                <li>Google Analytics</li>
+                                <li>Google Tag Manager</li>
+                                <li>User behavior data</li>
+                                <li>Reporting and insights</li>
+                            </ul>
+                            <a href="#" class="btn btn-solid">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/card -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Seo Section -->
+    <section class="cta-section py-4 py-lg-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2">
+                    <div class="img-box">
+                        <img src="images/telphone.png" class="img-fluid object-fit-contain" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="cta-content">
+                        <span>Stop losing business to your competitors...</span>
+                        <h2 class="cta-title">Measure Your Website's Performance</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="cta-info">
+                        <span class="icon-text">Call Us Now<i class="fa-solid fa-arrow-turn-down ms-2"></i></span>
+                        <a href="#" class="tel-number">1-888-874-3791</a>
+                        <span>Or</span>
+                        <a href="#" class="btn btn-solid btn-md">Send a Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/cta Section -->
+    <section class="seo-plan-section py-4 py-lg-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Affordable SEO Packages</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title">Small Business</h3>
+                            <span class="sub-title">SEO Packages</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="price-wrap">
+                                <div class="plan-amount">15,000 INR/250 USD<span>Monthly</span> </div>
+                                <span class="text">Exclusive of all taxes</span>
+                            </div>
+                            <ul>
+                                <li class="title">
+                                    <h3>Website review & analysis</h3>
+                                </li>
+                                <li>Website analysis</li>
+                                <li>Competitor analysis</li>
+                                <li>Content duplication check</li>
+                                <li>Initial ranking report</li>
+                                <li>Keyword research</li>
+                                <li>SEO analysis</li>
+                                <li>Search engine ranking</li>
+                                <li>Competitor keyword analysis</li>
+                                <li>Organic search analysis</li>
+                                <li>SERP analysis</li>
+                                <li class="title">
+                                    <h3>On page seo analysis</h3>
+                                </li>
+                                <li>Meta Tags Creation</li>
+                                <li>Canonicalization</li>
+                                <li>URL Structure</li>
+                                <li>Content Optimization</li>
+                                <li>Image Optimization</li>
+                                <li>Heading Tag Optimization</li>
+                                <li>Website Speed Optimization</li>
+                                <li>Robots.txt</li>
+                                <li>Sitemap Creation</li>
+                                <li>Google Analytics &amp; Search Console Setup</li>
+                                <li>Blog Optimization – 2 Posts</li>
+                            </ul>
+                            <a href="#" class="btn btn-solid mt-3 mt-lg-4">Get Started</a>
+                        </div>
+                    </div><!--/Card -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title">Mid Size Business</h3>
+                            <span class="sub-title">SEO Packages</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="price-wrap">
+                                <div class="plan-amount">25,000 INR/400 USD<span>Monthly</span> </div>
+                                <span class="text">Exclusive of all taxes</span>
+                            </div>
+                            <ul>
+                                <li class="title">
+                                    <h3>Website review & analysis</h3>
+                                </li>
+                                <li>Website analysis</li>
+                                <li>Competitor analysis</li>
+                                <li>Content duplication check</li>
+                                <li>Initial ranking report</li>
+                                <li>Keyword research</li>
+                                <li>SEO analysis</li>
+                                <li>Search engine ranking</li>
+                                <li>Competitor keyword analysis</li>
+                                <li>Organic search analysis</li>
+                                <li>SERP analysis</li>
+                                <li class="title">
+                                    <h3>On page seo analysis</h3>
+                                </li>
+                                <li>Meta Tags Creation</li>
+                                <li>Canonicalization</li>
+                                <li>URL Structure</li>
+                                <li>Content Optimization</li>
+                                <li>Image Optimization</li>
+                                <li>Heading Tag Optimization</li>
+                                <li>Website Speed Optimization</li>
+                                <li>Robots.txt</li>
+                                <li>Sitemap Creation</li>
+                                <li>Google Analytics &amp; Search Console Setup</li>
+                                <li>Blog Optimization – 2 Posts</li>
+                            </ul>
+                            <a href="#" class="btn btn-solid mt-3 mt-lg-4">Get Started</a>
+                        </div>
+                    </div><!--/Card -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title">Large Or Ecommerce</h3>
+                            <span class="sub-title">SEO Packages</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="price-wrap">
+                                <div class="plan-amount">40, 000 INR/600 USD<span>Monthly</span> </div>
+                                <span class="text">Exclusive of all taxes</span>
+                            </div>
+                            <ul>
+                                <li class="title">
+                                    <h3>Website review & analysis</h3>
+                                </li>
+                                <li>Website analysis</li>
+                                <li>Competitor analysis</li>
+                                <li>Content duplication check</li>
+                                <li>Initial ranking report</li>
+                                <li>Keyword research</li>
+                                <li>SEO analysis</li>
+                                <li>Search engine ranking</li>
+                                <li>Competitor keyword analysis</li>
+                                <li>Organic search analysis</li>
+                                <li>SERP analysis</li>
+                                <li class="title">
+                                    <h3>On page seo analysis</h3>
+                                </li>
+                                <li>Meta Tags Creation</li>
+                                <li>Canonicalization</li>
+                                <li>URL Structure</li>
+                                <li>Content Optimization</li>
+                                <li>Image Optimization</li>
+                                <li>Heading Tag Optimization</li>
+                                <li>Website Speed Optimization</li>
+                                <li>Robots.txt</li>
+                                <li>Sitemap Creation</li>
+                                <li>Google Analytics &amp; Search Console Setup</li>
+                                <li>Blog Optimization – 2 Posts</li>
+                            </ul>
+                            <a href="#" class="btn btn-solid mt-3 mt-lg-4">Get Started</a>
+                        </div>
+                    </div><!--/Card -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/SEO PLan  Section -->
+    <section class="story-section sec-py">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Success story of the founder of Scale SEO</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="story-content">
+                        <div class="round-1"></div>
+                        <div class="round-2"></div>
+                        <h3 class="title">Great mentors bring the best out of you no matter where you stand in life</h3>
+                        <h4 class="name">Mr. Rajat Singh</h4>
+                        <h5>Founder of online class india</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <h3 class="card-title">Worked <span>for</span></h3>
+                        <div class="card-body">
+                            <div class="img-box"><img src="images/story/mcdonalds_logo_white.jpg" class="img-fluid object-fit-contain" alt=""></div>
+                            <div class="img-box"><img src="images/story/godrej-properties-logo.png" class="img-fluid object-fit-contain" alt=""></div>
+                            <div class="img-box"><img src="images/story/Pidilite_logo.svg.png" class="img-fluid object-fit-contain" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/story Section -->
+    <section class="partner-section sec-py">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Don’t Just Take Our Word for It</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/first-class-detailing.png" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Increased overall traffic by 180%</li>
+                                <li>Increased organic traffic by 215%</li>
+                                <li>Increased mobile traffic by 310%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/Card -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/mc-granite.png" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Increased overall traffic by 111%</li>
+                                <li>Opened 2 additional locations</li>
+                                <li>Increased organic traffic by 130%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/Card -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/seiffert-industrial.png" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Implemented multilanguage support</li>
+                                <li>Increased international leads</li>
+                                <li>Increased organic reach internationally</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/Card -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Partner Section -->
+    <section class="proposal-section py-4 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="proposal-container text-center">
+                        <h2 class="section-title">Let’s get started. Request for <strong>free Proposal today</strong> </h2>
+                        <div class="proposal-form">
+                            <form action="#">
+                                <div class="input-group mb-3 website-area">
+                                    <input type="text" class="form-control" placeholder="Enter Your Wesite">
+                                    <button class="input-group-text" id="send_proposal">Send me a proposal</button>
+                                </div>
+                                <div class="hidden-form">
+                                    <div class="row">
+                                        <div class="form-group col-md-3">
+                                            <input type="text" class="form-control " name="name" placeholder="Full Name" required="" maxlength="75">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <input type="email" name="email" class="form-control " placeholder="Email" required="" maxlength="100">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <input type="tel" class="form-control" name="phone" placeholder="Phone No" required="" pattern=".{9,14}" maxlength="15">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <input type="submit" class="btn btn-info" value="Submit Query">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--/proposal Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/proposal Section -->
+    <section class="footer-cta-section">
+        <div class="cta-bg-layers">
+            <div class="footer-cta-img-1 cta-bg"></div>
+            <div class="footer-cta-img-2 cta-bg"></div>
+            <div class="footer-cta-img-2 cta-bg"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer-cta-img">
+                        <img src="images/rocket.svg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-cta-content">
+                        <h2 class="section-title">You have a vision. We have a team to get you there.</h2>
+                        <span>Contact Us</span>
+                        <a href="#" class="tel-number">1-888-874-3791</a>
+                        <span>Or</span>
+                        <a href="#" class="btn btn-solid">Send a Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Footer CTA Section -->
+    <footer class="footer pt-4 pt-lg-5">
+        <section class="main-footer pb-0 pb-lg-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-widget footer-about">
+                            <div class="footer-logo">
+                                <a href="#"><img src="images/white-logo.svg" class="img-fluid object-fit-contain" alt=""></a>
+                            </div>
+                            <p>207 Commerce Dr. Amherst, NY 1422</p>
+                            <h3><strong>Toll Free:</strong>(888) 874-3791</h3>
+                            <span>Local:(716) 831-9716</span>
+                            <span>Fax: (716) 219-1022</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <div class="footer-widget footer-links">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Digital Marketing Services</a></li>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Content Marketing</a></li>
+                                <li><a href="#">Social Media Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="footer-widget footer-links">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Small Business Solutions</a></li>
+                                <li><a href="#">Medium Business Solutions</a></li>
+                                <li><a href="#">Enterprise Marketing</a></li>
+                                <li><a href="#">Partner Program</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="footer-widget footer-links">
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Refer-a-friend Program</a></li>
+                                <li><a href="#">Website Analysis</a></li>
+                                <li><a href="#">After Hours Support</a></li>
+                                <li><a href="#">Maximizing Local SEO</a></li>
+                                <li><a href="#">Email Marketing Guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/Main Footer -->
+        <section class="copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright-content">
+                            <p>© 2023 SEO Scale</p>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Sitemap</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="social-nav">
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title text-center" id="exampleModalLabel">Let's Chat</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Let's discuss your digital marketing goals! We're quick to respond, so we'll be in touch shortly to set up a time to chat.</p>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">First Name <span>*</span></label>
+                                    <input type="text" class="form-control" id="name" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="Email" class="form-label">Business Email Address <span>*</span></label>
+                                    <input type="text" class="form-control" id="Email" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="number" class="form-label">Phone <span>*</span></label>
+                                    <input type="text" class="form-control" id="number" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="Website" class="form-label">Website</label>
+                                    <input type="text" class="form-control" id="Website" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-content">
+                                    SEO Scale is committed to protecting your privacy. We only use the information you share with us to contact you about relevant content, products, and services. You can easily unsubscribe at any time. For more information, check out our <a href="#"> Privacy Policy.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="" class="form-label mb-3">Would you like to receive occasional promotional offers from SEO Scale?*</label>
+                                    <div class="form-check-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="option1">
+                                            <label class="form-check-label" for="no">No</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option2">
+                                            <label class="form-check-label" for="yes">Yes</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-solid">Get Started</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-top"><div class="scroll-top-inner"><i class="fa-solid fa-arrow-up"></i></div></div>
+    <!-- Bootstrap & Jquery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js" integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+       // A $( document ).ready() block.
+        $( document ).ready(function(){
+             $('.hidden-form').hide();
+            $('#send_proposal').click(function() {
+                $('.website-area').hide();
+                $('.hidden-form').show();
+            });
+        });
+    </script>
+<script defer>window.addEventListener('DOMContentLoaded', function() {
+    jQuery(document).ready(function($) {
+        jQuery.getScript('https://www.mainstreethost.com/wp-content/themes/bones/library/js/process-mod.js');
+    });
+});
+</script>
+</body>
+</html>
