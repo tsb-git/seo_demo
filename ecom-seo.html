@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.svg" class="img-fluid" alt="">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown has-megamenu">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Local SEO</a></li>
+                                    <li><a class="dropdown-item" href="#">Technical SEO</a></li>
+                                    <li><a class="dropdown-item" href="#">Analytices</a></li>
+                                </ul>
+                                
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Photo Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="media-coverage.html">Media Coverage</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Header -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="banner-content">
+                        <h2 class="banner-title">Meet the SEO agency that brings you traffic and leads instead of excuses.</h2>
+                        <p>Built in NYC. Delivering for clients around the world.</p>
+
+                        <a href="#contact_modal" data-bs-toggle="modal" class="btn btn-solid btn-md px-lg-5">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Banner Section -->
+    <section class="proposal-section py-4 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="proposal-container text-center">
+                        <h2 class="section-title">Let’s get started. Request for <strong>free Proposal today</strong> </h2>
+                        <div class="proposal-form">
+                            <form action="#">
+                                <div class="input-group mb-3 website-area">
+                                    <input type="text" class="form-control" placeholder="Enter Your Wesite">
+                                    <button class="input-group-text" id="send_proposal">Send me a proposal</button>
+                                </div>
+                                <div class="hidden-form" style="display: none;">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Full Name" required="" maxlength="75">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email" required="" maxlength="100">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" name="phone" placeholder="Phone No" required="" pattern=".{9,14}" maxlength="15">
+                                    </div>
+                                    <button type="submit" class="btn btn-solid">Submit Query</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--/proposal Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/proposal Section -->
+    <section class="progress-section sec-py">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-header text-center">
+                        <h2 class="section-title mb-3 mb-lg-4">We're All About Ecommerce</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="circular-progress-group">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div id="progress-seo-one" class="progress-circle">
+                                <div class="progress-number-group">
+                                    <span class="progress-number"></span>
+                                    <span class="progress-number-suffix">&#37;</span>
+                                </div>
+                            </div><!--/progress-circle -->
+                            <h3 class="progress-title">Of people shop online every month</h3>
+                        </div><!--/card -->
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div id="progress-seo-two" class="progress-circle">
+                                <div class="progress-number-group">
+                                    <span class="progress-number"></span>
+                                    <span class="progress-number-suffix">&#37;</span>
+                                </div>
+                            </div><!--/progress-circle -->
+                            <h3 class="progress-title">Of purchases will be made online by 2040</h3>
+                        </div><!--end .card-->
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div id="progress-seo-three" class="progress-circle">
+                                <div class="progress-number-group">
+                                    <span class="progress-number"></span>
+                                    <span class="progress-number-suffix">&#37;</span>
+                                </div>
+                            </div><!--/progress-circle -->
+                            <h3 class="progress-title">Of shopping carts are abandoned</h3>
+                        </div><!--end .card-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>		
+    <!--/Progress Section -->
+    <section class="seo-service-section sec-py">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section-header">
+                        <h2 class="section-title text-center">Ecommerce SEO Services</h2>
+                        <p>Through years of experience, our approach to SEO has evolved and our process refined. But success doesn’t just come from the process; it comes from the team implementing it. At Mainstreethost, we have a dedicated optimization team, offering diverse skills and insight, all working towards one goal: making SEO work for your business. And since every eCommerce business is unique, we take the time to learn about you, your business model, your target audience and goals in order to build a customized strategy tailored for your needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/services/backlink-analysis.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Website <br> Audit</h3>
+                            <p>Search engine optimization strategically targeted towards the audience in your community. Our local SEO team drives customers in-store and online through keyword research and intelligent on-page SEO.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/services/magnifying-glass.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Keyword <br> Research</h3>
+                            <p>Locally optimized content, written by experienced copywriters. Our team has a deep understanding of creating local content that connects with your customers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/services/website-architecture-1.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Site <br> Structure</h3>
+                            <p>Creating a strong local presence starts with your website. Our design team focuses on developing websites that are structured to accommodate the needs of local searchers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/data-driven-marketing.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Enhanced <br> Ecommerce Analytics</h3>
+                            <p>Strategic optimization of your Google Business Profile (formerly Google My Business) for maximum exposure on the local search results page and within Google Maps.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/services/thumbs-up-thumbs-down.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Schema <br> Markup</h3>
+                            <p>Fix, create and clean up your local listings. Local directory listings (citations) play a major role in local search optimization; our team will get your business listed in all of the necessary directories (70+) to improve your exposure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/services/map-and-marker-1.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Content <br> Marketing</h3>
+                            <p>English is great, but we can help translate your website content into a language that search engines will understand. Schema markup is a coding language our local SEO team implements that clearly tells the search engines what your web content is about.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/services/ppc-icon.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Ecommerce <br> SEO Platforms</h3>
+                            <p>English is great, but we can help translate your website content into a language that search engines will understand. Schema markup is a coding language our local SEO team implements that clearly tells the search engines what your web content is about.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="images/services/coding.svg" class="img-fluid object-fit-contain" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Schema <br> Markup</h3>
+                            <p>English is great, but we can help translate your website content into a language that search engines will understand. Schema markup is a coding language our local SEO team implements that clearly tells the search engines what your web content is about.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="cta-section py-4 py-lg-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2">
+                    <div class="img-box">
+                        <img src="images/telphone.png" class="img-fluid object-fit-contain" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="cta-content">
+                        <span>Stop losing business to your competitors...</span>
+                        <h2 class="cta-title">Measure Your Website's Performance</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="cta-info">
+                        <span class="icon-text">Call Us Now<i class="fa-solid fa-arrow-turn-down ms-2"></i></span>
+                        <a href="#" class="tel-number">1-888-874-3791</a>
+                        <span>Or</span>
+                        <a href="#" class="btn btn-solid btn-md">Send a Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/cta Section -->
+    <section class="service-content-section sec-py">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="img-box pe-lg-4">
+                        <img src="images/services/data-driven-marketing.svg" class="img-fluid object-fit-cover" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content">
+                        <h2 class="section-title">Why Choose Our Local SEO Agency?</h2>
+                        <p>We were founded on search engine optimization over 20 years ago, and it continues to be the heart of our company today. Staying up to date on the latest trends and industry best practices, as well as keeping our skills sharp is the difference between our local SEO services and our competitors. Our process starts with you: learning about who you are as a brand, your story and your unique business goals.</p>
+                        <p>Following industry best practices (and a few local SEO tricks we’ve learned throughout the years!), we are able to take the necessary steps to create an online platform for your local business to grow.</p>
+                        <p>So, take charge of your online presence and invest in your local SEO strategy.</p>
+                        <p>By only practicing the latest in digital marketing techniques, we can transform your online presence into a platform that drives [digital] traffic to your website, and [foot] traffic to your store.</p>
+                        <div class="action-btn mt-3 pt-lg-4">
+                            <a href="#contact_modal" data-bs-toggle="modal" class="btn btn-solid btn-md px-lg-5">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/local-seo-section -->
+
+    <section class="footer-cta-section">
+        <div class="cta-bg-layers">
+            <div class="footer-cta-img-1 cta-bg"></div>
+            <div class="footer-cta-img-2 cta-bg"></div>
+            <div class="footer-cta-img-2 cta-bg"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer-cta-img">
+                        <img src="images/rocket.svg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-cta-content">
+                        <h2 class="section-title">You have a vision. We have a team to get you there.</h2>
+                        <span>Contact Us</span>
+                        <a href="#" class="tel-number">1-888-874-3791</a>
+                        <span>Or</span>
+                        <a href="#" class="btn btn-solid">Send a Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Footer CTA Section -->
+    <footer class="footer pt-4 pt-lg-5">
+        <section class="main-footer pb-0 pb-lg-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-widget footer-about">
+                            <div class="footer-logo">
+                                <a href="#"><img src="images/white-logo.svg" class="img-fluid object-fit-contain" alt=""></a>
+                            </div>
+                            <p>207 Commerce Dr. Amherst, NY 1422</p>
+                            <h3><strong>Toll Free:</strong>(888) 874-3791</h3>
+                            <span>Local:(716) 831-9716</span>
+                            <span>Fax: (716) 219-1022</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <div class="footer-widget footer-links">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Digital Marketing Services</a></li>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Content Marketing</a></li>
+                                <li><a href="#">Social Media Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="footer-widget footer-links">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Small Business Solutions</a></li>
+                                <li><a href="#">Medium Business Solutions</a></li>
+                                <li><a href="#">Enterprise Marketing</a></li>
+                                <li><a href="#">Partner Program</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="footer-widget footer-links">
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Refer-a-friend Program</a></li>
+                                <li><a href="#">Website Analysis</a></li>
+                                <li><a href="#">After Hours Support</a></li>
+                                <li><a href="#">Maximizing Local SEO</a></li>
+                                <li><a href="#">Email Marketing Guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/Main Footer -->
+        <section class="copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright-content">
+                            <p>© 2023 SEO Scale</p>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Sitemap</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="social-nav">
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title text-center" id="exampleModalLabel">Let's Chat</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Let's discuss your digital marketing goals! We're quick to respond, so we'll be in touch shortly to set up a time to chat.</p>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">First Name <span>*</span></label>
+                                    <input type="text" class="form-control" id="name" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="Email" class="form-label">Business Email Address <span>*</span></label>
+                                    <input type="text" class="form-control" id="Email" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="number" class="form-label">Phone <span>*</span></label>
+                                    <input type="text" class="form-control" id="number" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="Website" class="form-label">Website</label>
+                                    <input type="text" class="form-control" id="Website" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-content">
+                                    SEO Scale is committed to protecting your privacy. We only use the information you share with us to contact you about relevant content, products, and services. You can easily unsubscribe at any time. For more information, check out our <a href="#"> Privacy Policy.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="" class="form-label mb-3">Would you like to receive occasional promotional offers from SEO Scale?*</label>
+                                    <div class="form-check-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="option1">
+                                            <label class="form-check-label" for="no">No</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option2">
+                                            <label class="form-check-label" for="yes">Yes</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-solid">Get Started</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-top"><div class="scroll-top-inner"><i class="fa-solid fa-arrow-up"></i></div></div>
+    <!-- Bootstrap & Jquery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js" integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        document.querySelectorAll('.load-more-button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var listContainer = this.parentElement.querySelector('.seo-list-container');
+                listContainer.classList.toggle('show-all-items');
+                this.textContent = (listContainer.classList.contains('show-all-items')) ? 'Show Less' : 'Load More';
+            });
+        });
+    </script>
+    
+
+    <script>
+       // A $( document ).ready() block.
+        $( document ).ready(function(){
+             $('.hidden-form').hide();
+            $('#send_proposal').click(function() {
+                $('.website-area').hide();
+                $('.hidden-form').show();
+            });
+        });
+    </script>
+<script defer>window.addEventListener('DOMContentLoaded', function() {
+    jQuery(document).ready(function($) {
+        jQuery.getScript('https://www.mainstreethost.com/wp-content/themes/bones/library/js/process-mod.js');
+    });
+});
+</script>
+</body>
+</html>

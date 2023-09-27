@@ -81,6 +81,18 @@ ul li{
     font-weight: 600;
 }
 /*|========================================================================
+    Form
+===========================================================================|*/
+.form-group{
+    margin-bottom: 1rem;
+}
+/*| Media Query |==========================================================|*/
+@media (min-width: 992px){
+    .form-group{
+        margin-bottom: 1.25rem;
+    }
+}
+/*|========================================================================
     Button
 ===========================================================================|*/
 .btn{
@@ -256,7 +268,7 @@ ul li{
 .eyebrow-title{
     display: block;
     color: var(--clr-primary);
-    font-size: .875rem;
+    font-size: 1rem;
     font-weight: 500;
     text-transform: capitalize;
     margin-bottom: .5rem;
