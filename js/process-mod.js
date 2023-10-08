@@ -1,18 +1,18 @@
 // Add class 'active-text' to the first child of '.process-mod-step-container'
-jQuery('.process-mod-step-container:first-child').addClass('active-text');
+jQuery('.step-container:first-child').addClass('active-text');
 
 var i_step = 0;
 var items = [
-    {'processSVGSection': '#process-mod-svg-section-1', 'processText': '#process-mod-step-container-1'},
-    {'processSVGSection': '#process-mod-svg-section-2', 'processText': '#process-mod-step-container-2'},
-    {'processSVGSection': '#process-mod-svg-section-3', 'processText': '#process-mod-step-container-3'},
-    {'processSVGSection': '#process-mod-svg-section-4', 'processText': '#process-mod-step-container-4'},
-    {'processSVGSection': '#process-mod-svg-section-5', 'processText': '#process-mod-step-container-5'},
-    {'processSVGSection': '#process-mod-svg-section-6', 'processText': '#process-mod-step-container-6'},
-    {'processSVGSection': '#process-mod-svg-section-7', 'processText': '#process-mod-step-container-7'},
-    {'processSVGSection': '#process-mod-svg-section-8', 'processText': '#process-mod-step-container-8'},
-    {'processSVGSection': '#process-mod-svg-section-9', 'processText': '#process-mod-step-container-9'},
-    {'processSVGSection': '#process-mod-svg-section-10', 'processText': '#process-mod-step-container-10'},
+    {'processSVGSection': '#svg-section-1', 'processText': '#step-container-1'},
+    {'processSVGSection': '#svg-section-2', 'processText': '#step-container-2'},
+    {'processSVGSection': '#svg-section-3', 'processText': '#step-container-3'},
+    {'processSVGSection': '#svg-section-4', 'processText': '#step-container-4'},
+    {'processSVGSection': '#svg-section-5', 'processText': '#step-container-5'},
+    {'processSVGSection': '#svg-section-6', 'processText': '#step-container-6'},
+    {'processSVGSection': '#svg-section-7', 'processText': '#step-container-7'},
+    {'processSVGSection': '#svg-section-8', 'processText': '#step-container-8'},
+    {'processSVGSection': '#svg-section-9', 'processText': '#step-container-9'},
+    {'processSVGSection': '#svg-section-10', 'processText': '#step-container-10'},
 ];
 
 // Iterate through 'items' and add click event handlers
@@ -20,11 +20,11 @@ jQuery.each(items, function() {
     var that = this;
     jQuery(this.processSVGSection).on('click', function() {
         // changes section
-        jQuery('.process-mod-svg-section').removeClass('active-svg-section');
+        jQuery('.svg-section').removeClass('active-svg-section');
         jQuery(this).addClass('active-svg-section');
 
         // changes text
-        jQuery('.process-mod-step-container').removeClass('active-text');
+        jQuery('.step-container').removeClass('active-text');
         jQuery(that.processText).addClass('active-text');
 
         if (jQuery(this).is(":hover")) {
@@ -90,41 +90,34 @@ if (jQuery('.process-mod-svg').length > 0) {
         } else {
             //jQuery('#statusofview').html('statusofview - true<br>pause - ' +  pause_ );
         }
-    }, 2500);
+    }, 2000);
 
-    jQuery('#process-mod-service-wheel, .process-mod-step-container').on('touch mouseenter', function() {
+    jQuery('#process-mod-service-wheel, .step-container').on('touch mouseenter', function() {
         pause_ = true;
     });
 
-    jQuery('.process-mod-svg, .process-mod-step-container').on('mouseleave', function() {
+    jQuery('.process-mod-svg, .step-container').on('mouseleave', function() {
         pause_ = false;
     });
 }
 
-// PROCESS MOD - STEP TOGGLE
-jQuery('.process-mod-step-caret').on('click', function() {
-    jQuery('.process-mod-step-caret').not(this).each(function() {
-        if (jQuery(this).parent('.process-mod-step-title').siblings('.process-mod-step-text-and-bttn').hasClass('process-mod-step-text-and-bttn-open')) {
-            jQuery(this).parent('.process-mod-step-title').siblings('.process-mod-step-text-and-bttn').slideUp('slow').removeClass('process-mod-step-text-and-bttn-open');
-            jQuery(this).toggleClass('process-mod-step-caret-open');
-        }
+// Toggle Step Content on Click of Step Title
+jQuery('.step-title').on('click', function() {
+
+    jQuery(this).toggleClass('step-title-open');
+    
+    jQuery(this).parent().find('.step-content').slideToggle('slow', function() {
+        jQuery(this).toggleClass('step-content-open');
     });
 
-    jQuery(this).toggleClass('process-mod-step-caret-open');
-
-    if (jQuery(this).parent('.process-mod-step-title').siblings('.process-mod-step-text-and-bttn').hasClass('process-mod-step-text-and-bttn-open')) {
-        jQuery(this).parent('.process-mod-step-title').siblings('.process-mod-step-text-and-bttn').slideUp('slow').removeClass('process-mod-step-text-and-bttn-open');
-    } else {
-        jQuery(this).parent('.process-mod-step-title').siblings('.process-mod-step-text-and-bttn').slideDown('slow').addClass('process-mod-step-text-and-bttn-open');
-    }
+    jQuery('.step-title').not(this).removeClass('step-title-open');
+    jQuery('.step-content').not(jQuery(this).parent().find('.step-content')).slideUp('slow').removeClass('step-content-open');
 });
 
-// PROCESS MOD - STEP CLOSER
 jQuery('.process-mod-close').click(function() {
     jQuery('.process-mod-step').removeClass('active-mod-step');
 });
 
-// PROCESS MOD - STEP NUMBERER
-jQuery('.process-mod-step').each(function() {
-    jQuery(this).find('.process-mod-step-title').children('span').prepend('<span class="process-mod-step-number">' + (jQuery(this).index() + 1) + '</span>');
+jQuery('.process-mod-step').each(function(index) {
+    jQuery(this).find('.step-title span').prepend('<span class="step-number">' + (index + 1) + '</span>');
 });
