@@ -384,15 +384,6 @@ body{
 @media (max-width: 991.98px){}
 @media (max-width: 320.98px){}
 /*|==================================================================================
-    Featured Section
-====================================================================================|*/
-.featured-section{}
-/*| Media Query ====================================================================|*/
-@media (min-width: 768px){}
-@media (min-width: 992px){}
-@media (max-width: 991.98px){}
-@media (max-width: 320.98px){}
-/*|==================================================================================
     Subcribe Section
 ====================================================================================|*/
 .proposal-section{
@@ -680,7 +671,6 @@ body{
     background: #e6e8eb;
 }
 .cta-section .img-box{
-    width: 80%;
     margin: auto;
 }
 .cta-section .cta-content{
@@ -740,6 +730,12 @@ body{
 }
 @media (max-width: 991.98px){
     .cta-section .img-box{
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 575.98px){
+    .cta-section .img-box{
+        width: 120px;
         margin-bottom: 1rem;
     }
 }
@@ -1523,7 +1519,10 @@ body{
     service content section 
 =====================================================================================|*/
 .service-content-section{}
-.service-content-section .img-box{}
+.service-content-section .img-box{
+    width: 80%;
+    margin: 0 auto 1rem;
+}
 .service-content-section .content{}
 .service-content-section .content p{
     line-height: 1.6;
@@ -1562,7 +1561,7 @@ body{
     margin-bottom: 0;
 }
 .seo-service-section .card-body ul{
-    text-align: left;
+    /* text-align: center; */
     padding-left: 20px;
     margin-top: 1rem;
 }
@@ -1584,7 +1583,8 @@ body{
         /* margin-bottom: 1.5rem; */
     }
     .seo-service-section .card .img-box{
-        width: 65%;
+        width: 70%;
+        height: 150px;
     }
     .seo-service-section .card-body{
         padding: 1.25rem 0;
@@ -1601,7 +1601,7 @@ body{
         margin-bottom: 20px;
     }
     .seo-service-section .card-body ul{
-        padding-left: 40px;
+        padding-left: 30px;
     }
 }
 /*|==================================================================================
@@ -1669,7 +1669,12 @@ body{
 }
 /*| Media Query ====================================================================|*/
 @media (min-width: 992px){}
-@media (max-width: 991.98px){}
+@media (max-width: 575.98px){
+    .conversion-section .img-box{
+        width: 110px;
+        margin: -30px auto 20px;
+    }
+}
 /*|==================================================================================
     Analytics Section
 =====================================================================================|*/
@@ -1679,6 +1684,7 @@ body{
     margin-bottom: 20px;
 }
 .analytics-section .card .img-box{
+    width: 55%;
     margin: 0 auto;
 }
 .analytics-section .card-body{}
@@ -1713,7 +1719,12 @@ body{
         padding-left: 60px;
     } 
 }
-@media (max-width: 991.98px){}
+@media (max-width: 575.98px){
+    .analytics-section .card-body ul{
+        width: 63%;
+        margin: auto;
+    }
+}
 /*|==================================================================================
     Blog Section
 =====================================================================================|*/
@@ -1835,15 +1846,6 @@ body{
         margin-bottom: .75rem !important;
     }
 }
-@media (max-width: 991.98px){}
-/*|==================================================================================
-    Section
-=====================================================================================|*/
-
-/*| Media Query ====================================================================|*/
-@media (min-width: 576px){}
-@media (min-width: 768px){}
-@media (min-width: 992px){}
 @media (max-width: 991.98px){}
 .scroll-arrow-group {display:inline;}
 .scroll-arrow-group .scroll-arrow {}

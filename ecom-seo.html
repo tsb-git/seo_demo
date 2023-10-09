@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/logo.svg" class="img-fluid" alt="">
+                        <img src="images/logo.png" class="img-fluid" alt="">
                     </a>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
@@ -45,16 +45,13 @@
                                     <li><a class="dropdown-item" href="local-seo.html">Local SEO</a></li>
 									<li><a class="dropdown-item" href="ecom-seo.html">Ecommerce SEO</a></li>
                                     <li><a class="dropdown-item" href="technical-seo.html">Technical SEO</a></li>
-                                    <li><a class="dropdown-item" href="web-analytices.html">Web Analytices</a></li>
+                                    <li><a class="dropdown-item" href="web-analytics.html">Web Analytics</a></li>
                                 </ul>
                                 
                             </div>
                         </li>
 						<li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Blog.html">Blog</a>
                         </li>
                         
                         
@@ -216,36 +213,13 @@
                         </div>
                         <div class="card-body" >
                             <h3 class="title">Site <span>Structure</span></h3>
-                            <!DOCTYPE html>
-							<html>
-							<head>
-							<style>
-							div.container {
-							  text-align: center;
-							}
-
-							ul.myUL {
-							  display: inline-block;
-							  text-align: left;
-							}
-							</style>
-							</head>
-							<body>
-
-							<div class="container">
-							  <ul class="myUL"> 
+                            
+							  <ul > 
 								<li>Sitemaps</li>
 								<li>Internal linking</li>
 								<li>Usability</li>
 							  </ul>
-							</div>
-
-							</body>
-							</html>
-
-
-
-							<ul>
+							
                                
 
                             </ul>
@@ -305,24 +279,7 @@
                         <div class="card-body">
                             <h3 class="title">Ecommerce <span>SEO Platforms</span></h3>
                             <ul>
-							<!DOCTYPE html>
-							<html>
-							<head>
-							<style>
-							div.container {
-							  text-align: center;
-							}
-
-							ul.myUL {
-							  display: inline-block;
-							  text-align: left;
-							}
-							</style>
-							</head>
-							<body>
-
-							<div class="container">
-							  <ul class="myUL"> 
+							
 								<li>Shopify</li>
 								<li>Magento</li>
 								<li>Volusion</li>
@@ -331,11 +288,7 @@
 								<li>Squarespace</li>
 								<li>Wix</li>
 								<li>PrestaShop</li>
-							  </ul>
-							</div>
-
-							</body>
-							</html>
+							  
                                 
                             </ul>
 							
@@ -429,7 +382,7 @@
                     <div class="col-lg-3">
                         <div class="footer-widget footer-about">
                             <div class="footer-logo">
-                                <a href="#"><img src="images/white-logo.svg" class="img-fluid object-fit-contain" alt=""></a>
+                                <a href="#"><img src="images/logo.png" class="img-fluid object-fit-contain" alt=""></a>
                             </div>
                             <p>Office No.-2, Street No.- 4, Laxman Vihar, Gurugram, India</p>
                             <h3><strong>Contact :</strong>+91 99115 97585</h3>
@@ -472,17 +425,13 @@
                         <div class="copyright-content">
                             <p>© 2023 SEO Scale</p>
                             <a href="#">Privacy Policy</a>
-                            <a href="#">Sitemap</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <ul class="social-nav">
                             <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -549,7 +498,70 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js" integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="js/app.js"></script>
-    <script src="js/custom.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+
+        jQuery(document).ready(function($) {
+            var has_ran = 0;
+
+            function isScrolledIntoView(elem) {
+                var $elem = $(elem);
+                var $window = $(window);
+
+                var docViewTop = $window.scrollTop();
+                var docViewBottom = docViewTop + $window.height();
+
+                var elemTop = $elem.offset().top;
+                var elemBottom = elemTop + $elem.height();
+
+                return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+            }
+
+            jQuery(window).scroll(function() {
+                if (isScrolledIntoView(jQuery('.circular-progress-group')) && (has_ran == 0)) {
+
+                    var counters = [
+                        { 'progress_ID': 'progress-seo-one', 'progress_num': 93, 'progress_color': '#26d07c' },
+                        { 'progress_ID': 'progress-seo-two', 'progress_num': 75, 'progress_color': '#26d07c' },
+                        { 'progress_ID': 'progress-seo-three', 'progress_num': 61, 'progress_color': '#26d07c' }
+                    ];
+
+                    console.log(counters);
+
+                    function circle_anim(_target, circle_val, circle_fill) {
+                        console.log(_target);
+                        var numeric_percentage = circle_val / 100; // Convert to a numeric value and divide by 100
+                        jQuery('#' + _target).circleProgress({
+                            value: numeric_percentage, // Use the numeric value here
+                            lineCap: 'round',
+                            size: 200,
+                            thickness: '20',
+                            animation: {
+                                duration: 3600,
+                                easing: 'circleProgressEasing'
+                            },
+                            emptyFill: 'rgba(0, 0, 0, .125)',
+                            fill: circle_fill,
+                        }).on('circle-animation-progress', function(event, progress) {
+                            // Update the progress number based on the correct calculation
+                            var progressValue = Math.round(numeric_percentage * 100 * progress);
+                            jQuery('#' + _target).find('.progress-number').html(progressValue);
+                        });
+                    }
+
+                    for (let i = 0; i < counters.length; i++) {
+                        console.log(counters[i]);
+                        circle_anim(counters[i]['progress_ID'], counters[i]['progress_num'], counters[i]['progress_color']);
+                    }
+
+                    has_ran = 1;
+                }
+            });
+        });
+
+        });
+
+    </script>
     <script>
         document.querySelectorAll('.load-more-button').forEach(function(button) {
             button.addEventListener('click', function() {
@@ -571,11 +583,5 @@
             });
         });
     </script>
-<script defer>window.addEventListener('DOMContentLoaded', function() {
-    jQuery(document).ready(function($) {
-        jQuery.getScript('https://www.mainstreethost.com/wp-content/themes/bones/library/js/process-mod.js');
-    });
-});
-</script>
 </body>
 </html>

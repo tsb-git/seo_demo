@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
     jQuery(document).ready(function($) {
-            
         var has_ran = 0;
 
         function isScrolledIntoView(elem) {
@@ -17,60 +16,46 @@ window.addEventListener('DOMContentLoaded', function() {
             return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
         }
 
-        jQuery( window ).scroll(function() {
-            if (isScrolledIntoView(jQuery('.circular-progress-group')) && (has_ran == 0)){
+        jQuery(window).scroll(function() {
+            if (isScrolledIntoView(jQuery('.circular-progress-group')) && (has_ran == 0)) {
 
-                var counters = [];
-                                    var counter = [];
-                    counter['progress_ID'] = 'progress-seo-one';
-                    counter['progress_num'] = '93';
-                    counter['progress_color'] = '#26d07c';
+                var counters = [
+                    { 'progress_ID': 'progress-seo-one', 'progress_num': 5, 'progress_color': '#26d07c' },
+                    { 'progress_ID': 'progress-seo-two', 'progress_num': 76, 'progress_color': '#26d07c' },
+                    { 'progress_ID': 'progress-seo-three', 'progress_num': 41, 'progress_color': '#26d07c' }
+                ];
 
-                    counters.push(counter);
-                                    var counter = [];
-                    counter['progress_ID'] = 'progress-seo-two';
-                    counter['progress_num'] = '75';
-                    counter['progress_color'] = '#26d07c';
-
-                    counters.push(counter);
-                                    var counter = [];
-                    counter['progress_ID'] = 'progress-seo-three';
-                    counter['progress_num'] = '61';
-                    counter['progress_color'] = '#26d07c';
-
-                    counters.push(counter);
-                                
                 console.log(counters);
 
-                function circle_anim(_target, circle_val, circle_fill){
+                function circle_anim(_target, circle_val, circle_fill) {
                     console.log(_target);
+                    var numeric_percentage = circle_val / 100; // Convert to a numeric value and divide by 100
                     jQuery('#' + _target).circleProgress({
-                    value: '0.' + circle_val,
-                    lineCap: 'round',
-                    size: 200,
-                    thickness: '20',
-                    animation: {
-                        duration: 3600,
-                        easing: 'circleProgressEasing'
-                    },
-                    emptyFill: 'rgba(0, 0, 0, .125)',
-                    fill: circle_fill,
+                        value: numeric_percentage, // Use the numeric value here
+                        lineCap: 'round',
+                        size: 200,
+                        thickness: '20',
+                        animation: {
+                            duration: 3600,
+                            easing: 'circleProgressEasing'
+                        },
+                        emptyFill: 'rgba(0, 0, 0, .125)',
+                        fill: circle_fill,
                     }).on('circle-animation-progress', function(event, progress) {
-                        jQuery('#' + _target).find('.progress-number').html(Math.round(circle_val * progress));
+                        // Update the progress number based on the correct calculation
+                        var progressValue = Math.round(numeric_percentage * 100 * progress);
+                        jQuery('#' + _target).find('.progress-number').html(progressValue);
                     });
                 }
-                
-                for(let i = 0; i < counters.length; i++){
+
+                for (let i = 0; i < counters.length; i++) {
                     console.log(counters[i]);
                     circle_anim(counters[i]['progress_ID'], counters[i]['progress_num'], counters[i]['progress_color']);
                 }
-                
+
                 has_ran = 1;
-
             }
-
         });
-
     });
 
-});
+    });
